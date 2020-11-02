@@ -40,18 +40,13 @@ function send_reply_message($url, $post_header, $post_body)
 //     $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 //     $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);      echo "Result: ".$send_result."\r\n";   }
 // }
- if ( sizeof($request_array['events']) > 0 ) {
+// if ( sizeof($request_array['events']) > 0 ) {
 $post_body ='{
-  "type": "button",
-  "action": {
-    "type": "uri",
-    "label": "Tap me",
-    "uri": "https://example.com"
-  },
-  "style": "primary",
-  "color": "#0000ff"
+    "type": "text",
+    "text": "Hello, world"
 }';
 
    //   $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
-     $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);      echo "Result: ".$send_result."\r\n";   }
+     $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);      echo "Result: ".$send_result."\r\n";   
+ //}
 echo "OK";
